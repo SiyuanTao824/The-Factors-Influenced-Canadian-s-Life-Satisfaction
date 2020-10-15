@@ -29,7 +29,8 @@ Life satisfaction is an extensive term associated with everyone in the world. It
 However, even though many studies have focused on life satisfaction, few studies have focused on Canada and tested Canadians' life satisfaction. To fill the gap, this report will analyze factors associated with Canadians' life satisfaction using the data from the 2017 Canadian General Social Survey (GSS). Based on the comprehensive information from GSS, this report aims to test whether the factors influencing life satisfaction from previous studies could be applied to Canada and explore some other factors linked with Canadians' life satisfaction.
 
 ## Data
-The data used in the report comes from the 2017 Canadian General Social Survey (GSS). GSS is a fundamental social survey in Canada. It collects Canadians' information on a diverse range of scale, including age, sex, income, and health condition (Government of Canada, 2017). More importantly, the 2017 GSS includes the variable "feelings life," which is perfectly suitable for the report's research questions. Because it consists of this comprehensive information about Canadians that allows analyzing the relationship between life satisfaction and other factors, we chose GSS as the primary data to study in the report. There is a summary of the 2017 GSS below.
+
+The data used in the report comes from the 2017 Canadian General Social Survey (GSS). GSS is a fundamental social survey in Canada. It collects Canadians' information on a diverse range of scale, including age, sex, income, and health condition (Government of Canada, 2017). More importantly, the 2017 GSS includes the variable "feelings life," which is perfectly suitable for the report's research questions. Because it consists of this comprehensive information about Canadians that allows analyzing the relationship between life satisfaction and other factors, we chose GSS as the primary data to study in the report. 
 
 The target population of the 2017 Canadian GSS is "all non-institutionalized persons 15 years of age or older, living in the 10 provinces of Canada (Government of Canada, 2019)." The total Canadian population in 2017 was 36,545,295, the population of ages between 0 to 14 years was 5,912,118 (Government of Canada, 2020), so the population of people 15 years of age or older was 30,633,177. Thus, we can assume that the target population of the 2017 Canadian GSS is 30,633,177. Besides, the 2017 GSS contains 20,602 observations, which means the sample size of the data is 20,602.
 
@@ -55,8 +56,6 @@ In this report, we used the language **R** to build the multiple regression mode
 
 ## Results
 
-To begin with, there are some figures describing the distribution of some major variables in the model independently. 
-
 ```{r , echo=FALSE, message=FALSE, warning=FALSE}
 # Import required packages
 library(survey)
@@ -64,6 +63,8 @@ library(tidyverse)
 # Read the 2017 Canadian GSS dataset
 gss <- read.csv("gss.csv")
 ```
+
+To begin with, there are some figures describing the distribution of some major variables in the model independently. 
 
 ```{r, echo=FALSE}
 hist(gss$feelings_life, main="Figure 1: Frequency Distribution of Life Satisfaction", xlab="Life Satisfaction", col="grey", breaks = 10)
